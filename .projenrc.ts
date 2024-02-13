@@ -22,7 +22,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   },
   devDeps: ['@aws-cdk/integ-runner@2.120.0-alpha.0', '@aws-cdk/integ-tests-alpha@2.120.0-alpha.0'],
 
-  packageName: 'rds-scheduler', /* The "name" in package.json. */
+  packageName: 'cdk-rds-scheduler', /* The "name" in package.json. */
 
   publishToPypi: {
     distName: 'rds-scheduler',

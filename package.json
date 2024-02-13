@@ -1,5 +1,5 @@
 {
-  "name": "rds-scheduler",
+  "name": "cdk-rds-scheduler",
   "description": "Automatic Start and Stop Scheduler for AWS RDS",
   "repository": {
     "type": "git",
