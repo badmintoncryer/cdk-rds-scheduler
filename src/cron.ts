@@ -4,7 +4,7 @@
  * All fields are strings so you can use complex expressions. Absence of
  * a field implies '*' or '?', whichever one is appropriate.
  *
- * @see https://docs.aws.amazon.com/eventbridge/latest/userguide/scheduled-events.html#cron-expressions
+ * @see https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-cron-expressions.html
  */
 export interface CronOptions {
   /**

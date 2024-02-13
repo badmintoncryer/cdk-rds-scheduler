@@ -33,7 +33,7 @@ test('default for database cluster', () => {
   });
 
   const template = Template.fromStack(stack);
-  console.log(JSON.stringify(template.toJSON(), null, 2));
+
   template.hasResourceProperties('AWS::IAM::Role', {
     AssumeRolePolicyDocument: {
       Statement: [

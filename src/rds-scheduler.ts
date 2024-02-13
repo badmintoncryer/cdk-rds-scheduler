@@ -100,16 +100,17 @@ export class RdsScheduler extends Construct {
           scheduleExpressionTimezone: schedule.timezone?.timezoneName ?? TimeZone.ETC_UTC.timezoneName,
           target: {
             arn: Stack.of(this).formatArn({
+              region: '',
+              account: '',
               service: 'scheduler',
-              resource: 'aws-sdk:rds',
-              resourceName: isCluster ? 'startDBCluster' : 'startDBInstance',
+              resource: `aws-sdk:rds:${isCluster ? 'startDBCluster' : 'startDBInstance'}`,
             }),
             roleArn: schedulerRole.roleArn,
             input: JSON.stringify({
               ...(isCluster ? {
-                DBClusterIdentifier: identifier,
+                DbClusterIdentifier: identifier,
               } : {
-                DBInstanceIdentifier: identifier,
+                DbInstanceIdentifier: identifier,
               }),
             }),
           },
@@ -125,16 +126,17 @@ export class RdsScheduler extends Construct {
           scheduleExpressionTimezone: schedule.timezone?.timezoneName ?? TimeZone.ETC_UTC.timezoneName,
           target: {
             arn: Stack.of(this).formatArn({
+              region: '',
+              account: '',
               service: 'scheduler',
-              resource: 'aws-sdk:rds',
-              resourceName: isCluster ? 'stopDBCluster' : 'stopDBInstance',
+              resource: `aws-sdk:rds:${isCluster ? 'stopDBCluster' : 'stopDBInstance'}`,
             }),
             roleArn: schedulerRole.roleArn,
             input: JSON.stringify({
               ...(isCluster ? {
-                DBClusterIdentifier: identifier,
+                DbClusterIdentifier: identifier,
               } : {
-                DBInstanceIdentifier: identifier,
+                DbInstanceIdentifier: identifier,
               }),
             }),
           },
