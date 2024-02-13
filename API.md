@@ -112,7 +112,7 @@ Options to configure a cron expression.
 All fields are strings so you can use complex expressions. Absence of
 a field implies '*' or '?', whichever one is appropriate.
 
-> [https://docs.aws.amazon.com/eventbridge/latest/userguide/scheduled-events.html#cron-expressions](https://docs.aws.amazon.com/eventbridge/latest/userguide/scheduled-events.html#cron-expressions)
+> [https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-cron-expressions.html](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-cron-expressions.html)
 
 #### Initializer <a name="Initializer" id="rds-scheduler.CronOptions.Initializer"></a>
 

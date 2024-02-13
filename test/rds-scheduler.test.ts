@@ -100,15 +100,7 @@ test('default for database cluster', () => {
             {
               Ref: 'AWS::Partition',
             },
-            ':scheduler:',
-            {
-              Ref: 'AWS::Region',
-            },
-            ':',
-            {
-              Ref: 'AWS::AccountId',
-            },
-            ':aws-sdk:rds/startDBCluster',
+            ':scheduler:::aws-sdk:rds:startDBCluster',
           ],
         ],
       },
@@ -116,7 +108,7 @@ test('default for database cluster', () => {
         'Fn::Join': [
           '',
           [
-            '{"DBClusterIdentifier":"',
+            '{"DbClusterIdentifier":"',
             {
               Ref: 'DatabaseCluster68FC2945',
             },
@@ -147,15 +139,7 @@ test('default for database cluster', () => {
             {
               Ref: 'AWS::Partition',
             },
-            ':scheduler:',
-            {
-              Ref: 'AWS::Region',
-            },
-            ':',
-            {
-              Ref: 'AWS::AccountId',
-            },
-            ':aws-sdk:rds/stopDBCluster',
+            ':scheduler:::aws-sdk:rds:stopDBCluster',
           ],
         ],
       },
@@ -163,7 +147,7 @@ test('default for database cluster', () => {
         'Fn::Join': [
           '',
           [
-            '{"DBClusterIdentifier":"',
+            '{"DbClusterIdentifier":"',
             {
               Ref: 'DatabaseCluster68FC2945',
             },
@@ -266,15 +250,7 @@ test('default for database instance', () => {
             {
               Ref: 'AWS::Partition',
             },
-            ':scheduler:',
-            {
-              Ref: 'AWS::Region',
-            },
-            ':',
-            {
-              Ref: 'AWS::AccountId',
-            },
-            ':aws-sdk:rds/startDBInstance',
+            ':scheduler:::aws-sdk:rds:startDBInstance',
           ],
         ],
       },
@@ -282,7 +258,7 @@ test('default for database instance', () => {
         'Fn::Join': [
           '',
           [
-            '{"DBInstanceIdentifier":"',
+            '{"DbInstanceIdentifier":"',
             {
               Ref: 'DatabaseInstance24D16791',
             },
@@ -313,15 +289,7 @@ test('default for database instance', () => {
             {
               Ref: 'AWS::Partition',
             },
-            ':scheduler:',
-            {
-              Ref: 'AWS::Region',
-            },
-            ':',
-            {
-              Ref: 'AWS::AccountId',
-            },
-            ':aws-sdk:rds/stopDBInstance',
+            ':scheduler:::aws-sdk:rds:stopDBInstance',
           ],
         ],
       },
@@ -329,7 +297,7 @@ test('default for database instance', () => {
         'Fn::Join': [
           '',
           [
-            '{"DBInstanceIdentifier":"',
+            '{"DbInstanceIdentifier":"',
             {
               Ref: 'DatabaseInstance24D16791',
             },

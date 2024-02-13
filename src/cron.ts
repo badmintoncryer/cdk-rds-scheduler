@@ -80,35 +80,6 @@ export class Cron {
   }
 
   private validate(options: CronOptions) {
-    const minutePattern = /^(\*|([0-5]?[0-9](-[0-5]?[0-9])?)(,([0-5]?[0-9](-[0-5]?[0-9])?))*|\*\/[0-5]?[0-9])$/;
-    const hourPattern = /^(\*|([01]?[0-9]|2[0-3])(-([01]?[0-9]|2[0-3]))?)(,([01]?[0-9]|2[0-3])(-([01]?[0-9]|2[0-3]))?)*|\*\/([01]?[0-9]|2[0-3]))$/;
-    const dayPattern = /^(\*|\?|([0-2]?[0-9]|3[01])(-([0-2]?[0-9]|3[01]))?)(,([0-2]?[0-9]|3[01])(-([0-2]?[0-9]|3[01]))?)*|\*\/([0-2]?[0-9]|3[01])|L|LW|W)$/;
-    const monthPattern = /^(\*|([1-9]|1[012])(-([1-9]|1[012]))?)(,([1-9]|1[012])(-([1-9]|1[012]))?)*|\*\/([1-9]|1[012]))$/;
-    const weekDayPattern = /^(\*|\?|([1-7]|SUN|MON|TUE|WED|THU|FRI|SAT)(-([1-7]|SUN|MON|TUE|WED|THU|FRI|SAT))?)(,([1-7]|SUN|MON|TUE|WED|THU|FRI|SAT)(-([1-7]|SUN|MON|TUE|WED|THU|FRI|SAT))?)*|\*\/([1-7])|L|\#[1-5])$/;
-    const yearPattern = /^(\*|([1][9][7-9][0-9]|2[0][0-9][0-9]|21[0-8][0-9]|219[0-9])(-([1][9][7-9][0-9]|2[0][0-9][0-9]|21[0-8][0-9]|219[0-9]))?)(,([1][9][7-9][0-9]|2[0][0-9][0-9]|21[0-8][0-9]|219[0-9])(-([1][9][7-9][0-9]|2[0][0-9][0-9]|21[0-8][0-9]|219[0-9]))?)*|\*\/([1][9][7-9][0-9]|2[0][0-9][0-9]|21[0-8][0-9]|219[0-9]))$/;
-
-    if (options.minute && !minutePattern.test(options.minute)) {
-      throw new Error('Invalid minute field');
-    }
-    if (options.hour && !hourPattern.test(options.hour)) {
-      throw new Error('Invalid hour field');
-    }
-    if (options.day && !dayPattern.test(options.day)) {
-      throw new Error('Invalid day field');
-    }
-    if (options.month && !monthPattern.test(options.month)) {
-      throw new Error('Invalid month field');
-    }
-    if (options.weekDay && !weekDayPattern.test(options.weekDay)) {
-      throw new Error('Invalid weekDay field');
-    }
-    if (options.year && !yearPattern.test(options.year)) {
-      throw new Error('Invalid year field');
-    }
-
-    if (options.day !== '?' && options.weekDay !== '?' && (options.day !== '*' || options.weekDay !== '*')) {
-      throw new Error('You cannot specify both Day-of-month and Day-of-week in the same cron expression. Use "?" in one of these fields.');
-    }
     if (options.minute?.includes('/') && parseInt(options.minute.split('/')[1]) < 1) {
       throw new Error('Cron expressions that lead to rates faster than 1 minute are not supported.');
     }
