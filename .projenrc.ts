@@ -2,7 +2,7 @@ import { awscdk } from 'projen';
 const project = new awscdk.AwsCdkConstructLibrary({
   author: 'Kazuho CryerShinozuka',
   authorAddress: 'malaysia.cryer@gmail.com',
-  cdkVersion: '2.127.0',
+  cdkVersion: '2.120.0',
   description: 'Automatic Start and Stop Scheduler for AWS RDS',
   defaultReleaseBranch: 'main',
   keywords: ['aws', 'cdk', 'RDS', 'aws-cdk', 'EventBridge'],
@@ -20,7 +20,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
     compilerOptions: {},
     exclude: ['example', 'test/.*.snapshot'],
   },
-  devDeps: ['@aws-cdk/integ-runner@2.127.0-alpha.0', '@aws-cdk/integ-tests-alpha@2.127.0-alpha.0'],
+  devDeps: ['@aws-cdk/integ-runner@2.120.0-alpha.0', '@aws-cdk/integ-tests-alpha@2.120.0-alpha.0'],
 
   packageName: 'rds-scheduler', /* The "name" in package.json. */
 
