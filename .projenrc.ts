@@ -20,7 +20,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
     compilerOptions: {},
     exclude: ['example', 'test/.*.snapshot'],
   },
-  devDeps: ['@aws-cdk/integ-runner@2.127.0', '@aws-cdk/integ-tests-alpha@2.127.0-alpha.0'],
+  devDeps: ['@aws-cdk/integ-runner@2.127.0-alpha.0', '@aws-cdk/integ-tests-alpha@2.127.0-alpha.0'],
 
   packageName: 'rds-scheduler', /* The "name" in package.json. */
 

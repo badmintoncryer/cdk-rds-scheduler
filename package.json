@@ -36,7 +36,7 @@
     "organization": false
   },
   "devDependencies": {
-    "@aws-cdk/integ-runner": "2.127.0",
+    "@aws-cdk/integ-runner": "2.127.0-alpha.0",
     "@aws-cdk/integ-tests-alpha": "2.127.0-alpha.0",
     "@types/jest": "^29.5.12",
     "@types/node": "^18",

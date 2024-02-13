@@ -38,7 +38,7 @@
     "@aws-cdk/service-spec-types" "^0.0.47"
     "@cdklabs/tskb" "^0.0.3"
 
-"@aws-cdk/integ-runner@2.127.0":
+"@aws-cdk/integ-runner@2.127.0-alpha.0":
   version "2.127.0-alpha.0"
   resolved "https://registry.yarnpkg.com/@aws-cdk/integ-runner/-/integ-runner-2.127.0-alpha.0.tgz#954b20b3a2adcb02110f14be21b0988e37298353"
   integrity sha512-8qWkLdV84aCEQrsCitNnkgZh/SaarEyU9PekEX+Q2zxNqeMfcDXxXjK5JOvhwdDUTw3hbURXPMy4ulwMIwI3Og==
