@@ -34,11 +34,10 @@
     }
   },
   "ignorePatterns": [
-    "*.js",
+    "example/**/*",
+    "test/assets/**/*",
+    "test/*.snapshot/**/*",
     "*.d.ts",
-    "node_modules/",
-    "*.generated.ts",
-    "coverage",
     "!.projenrc.ts",
     "!projenrc/**/*.ts"
   ],
