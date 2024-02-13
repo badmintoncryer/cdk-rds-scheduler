@@ -1,10 +1,11 @@
 # CDK RDS Scheduler Construct
 
+[![View on Construct Hub](https://constructs.dev/badge?package=cdk-rds-scheduler)](https://constructs.dev/packages/cdk-rds-scheduler)
+
 A CDK construct for stopping and starting RDS instances or clusters at arbitrary times primarily aimed at reducing billing costs.
 
 ![Architecture](./image/architecture.png)
 
-[![View on Construct Hub](https://constructs.dev/badge?package=cdk-rds-scheduler)](https://constructs.dev/packages/cdk-rds-scheduler)
 [![Open in Visual Studio Code](https://img.shields.io/static/v1?logo=visualstudiocode&label=&message=Open%20in%20Visual%20Studio%20Code&labelColor=2c2c32&color=007acc&logoColor=007acc)](https://open.vscode.dev/badmintoncryer/cdk-rds-scheduler)
 [![npm version](https://badge.fury.io/js/cdk-rds-scheduler.svg)](https://badge.fury.io/js/cdk-rds-scheduler)
 [![Build Status](https://github.com/badmintoncryer/cdk-rds-scheduler/actions/workflows/build.yml/badge.svg)](https://github.com/badmintoncryer/cdk-rds-scheduler/actions/workflows/build.yml)
