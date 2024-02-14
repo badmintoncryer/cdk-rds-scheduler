@@ -703,7 +703,7 @@
             {
              "Ref": "AWS::AccountId"
             },
-            ":cluster/",
+            ":cluster:",
             {
              "Ref": "DatabaseCluster68FC2945"
             }

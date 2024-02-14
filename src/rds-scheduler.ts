@@ -1,4 +1,4 @@
-import { Stack, TimeZone } from 'aws-cdk-lib';
+import { ArnFormat, Stack, TimeZone } from 'aws-cdk-lib';
 import * as iam from 'aws-cdk-lib/aws-iam';
 import * as rds from 'aws-cdk-lib/aws-rds';
 import * as scheduler from 'aws-cdk-lib/aws-scheduler';
@@ -82,6 +82,7 @@ export class RdsScheduler extends Construct {
                   service: 'rds',
                   resource: isCluster ? 'cluster' : 'db',
                   resourceName: identifier,
+                  arnFormat: ArnFormat.COLON_RESOURCE_NAME,
                 }),
               ],
             }),
