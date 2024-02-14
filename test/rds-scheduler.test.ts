@@ -70,7 +70,7 @@ test('default for database cluster', () => {
                     {
                       Ref: 'AWS::AccountId',
                     },
-                    ':cluster/',
+                    ':cluster:',
                     {
                       Ref: 'DatabaseCluster68FC2945',
                     },
@@ -220,7 +220,7 @@ test('default for database instance', () => {
                     {
                       Ref: 'AWS::AccountId',
                     },
-                    ':db/',
+                    ':db:',
                     {
                       Ref: 'DatabaseInstance24D16791',
                     },
