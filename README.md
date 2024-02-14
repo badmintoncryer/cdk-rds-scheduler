@@ -2,7 +2,8 @@
 
 [![View on Construct Hub](https://constructs.dev/badge?package=cdk-rds-scheduler)](https://constructs.dev/packages/cdk-rds-scheduler)
 
-A CDK construct for stopping and starting RDS instances or clusters at arbitrary times primarily aimed at reducing billing costs.
+This is a CDK construct for creating a schedule to periodically start and stop RDS (Aurora) clusters or instances. 
+It can be used to reduce billing outside of operational hours.
 
 ![Architecture](./image/architecture.png)
 
