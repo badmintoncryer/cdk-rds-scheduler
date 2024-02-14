@@ -1,5 +1,6 @@
 import { awscdk } from 'projen';
 const project = new awscdk.AwsCdkConstructLibrary({
+  majorVersion: 1,
   author: 'Kazuho CryerShinozuka',
   authorAddress: 'malaysia.cryer@gmail.com',
   cdkVersion: '2.120.0',
@@ -10,7 +11,6 @@ const project = new awscdk.AwsCdkConstructLibrary({
   name: 'cdk-rds-scheduler',
   projenrcTs: true,
   repositoryUrl: 'https://github.com/badmintoncryer/cdk-rds-scheduler.git',
-
   eslintOptions: {
     dirs: [],
     ignorePatterns: ['example/**/*', 'test/assets/**/*', 'test/*.snapshot/**/*', '*.d.ts'],
@@ -21,9 +21,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
     exclude: ['example', 'test/.*.snapshot'],
   },
   devDeps: ['@aws-cdk/integ-runner@2.120.0-alpha.0', '@aws-cdk/integ-tests-alpha@2.120.0-alpha.0'],
-
   packageName: 'cdk-rds-scheduler', /* The "name" in package.json. */
-
   publishToPypi: {
     distName: 'rds-scheduler',
     module: 'rds_scheduler',
