@@ -23,12 +23,24 @@ class TestStack extends Stack {
       vpc,
     });
 
-    new RdsScheduler(this, 'RdsScheduler', {
+    new RdsScheduler(this, 'OnOffRdsScheduler', {
       cluster: databaseCluster,
       schedule: [
         {
           start: new Cron({ minute: '0', hour: '8', day: '?', weekDay: 'MON-FRI' }),
           stop: new Cron({ minute: '0', hour: '18', day: '?', weekDay: 'MON-FRI' }),
+        },
+      ],
+    });
+
+    new RdsScheduler(this, 'RdsInstanceScheduler', {
+      cluster: databaseCluster,
+      schedule: [
+        // Put the instance into a dormant state.
+        // As a measure for automatic start of Aurora, stop it every day.
+        {
+          stop: new Cron({ minute: '0', hour: '0', day: '?', weekDay: '*' }),
+          // timeZone is optional, default is UTC
         },
       ],
     });
