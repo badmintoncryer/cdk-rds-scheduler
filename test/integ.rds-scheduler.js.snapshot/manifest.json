@@ -18,7 +18,7 @@
         "validateOnSynth": false,
         "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
         "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
-        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/d02c0e60c4be25ddd46aba6f6fbec78b93de4ba728c5173cce76ec901b9058a7.json",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/522cd62d8cf2ca35bc1c5d1bc2da568b4a00859e15d0393e4136d1cd033b927c.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
         "additionalDependencies": [
@@ -193,7 +193,22 @@
         "/TestStack/DatabaseCluster": [
           {
             "type": "aws:cdk:warning",
-            "data": "Cluster DatabaseCluster only has serverless readers and no reader is in promotion tier 0-1.Serverless readers in promotion tiers >= 2 will NOT scale with the writer, which can lead to availability issues if a failover event occurs. It is recommended that at least one reader has `scaleWithWriter` set to true [ack: @aws-cdk/aws-rds:noFailoverServerlessReaders]"
+            "data": "Cluster DatabaseCluster only has serverless readers and no reader is in promotion tier 0-1.Serverless readers in promotion tiers >= 2 will NOT scale with the writer, which can lead to availability issues if a failover event occurs. It is recommended that at least one reader has `scaleWithWriter` set to true [ack: @aws-cdk/aws-rds:noFailoverServerlessReaders]",
+            "trace": [
+              "Annotations.addMessage (/Users/kazuhoshinozuka/git/cdk-rds-scheduler/node_modules/aws-cdk-lib/core/lib/annotations.js:1:1608)",
+              "Annotations.addWarningV2 (/Users/kazuhoshinozuka/git/cdk-rds-scheduler/node_modules/aws-cdk-lib/core/lib/annotations.js:1:825)",
+              "DatabaseCluster.validateClusterInstances (/Users/kazuhoshinozuka/git/cdk-rds-scheduler/node_modules/aws-cdk-lib/aws-rds/lib/cluster.js:1:11321)",
+              "DatabaseCluster._createInstances (/Users/kazuhoshinozuka/git/cdk-rds-scheduler/node_modules/aws-cdk-lib/aws-rds/lib/cluster.js:1:10232)",
+              "new DatabaseCluster (/Users/kazuhoshinozuka/git/cdk-rds-scheduler/node_modules/aws-cdk-lib/aws-rds/lib/cluster.js:5:5960)",
+              "new TestStack (/Users/kazuhoshinozuka/git/cdk-rds-scheduler/test/integ.rds-scheduler.js:36:33)",
+              "Object.<anonymous> (/Users/kazuhoshinozuka/git/cdk-rds-scheduler/test/integ.rds-scheduler.js:68:15)",
+              "Module._compile (node:internal/modules/cjs/loader:1376:14)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1435:10)",
+              "Module.load (node:internal/modules/cjs/loader:1207:32)",
+              "Module._load (node:internal/modules/cjs/loader:1023:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:135:12)",
+              "node:internal/main/run_main_module:28:49"
+            ]
           }
         ],
         "/TestStack/DatabaseCluster/Subnets/Default": [
