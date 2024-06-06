@@ -37,8 +37,8 @@ new RdsScheduler(this, 'RdsClusterScheduler', {
   schedule: [
     // Operate only during daytime on weekdays
     {
-      start: new Cron({ minute: '0', hour: '8', day: '*', weekDay: 'MON-FRI' }),
-      stop: new Cron({ minute: '0', hour: '18', day: '*', weekDay: 'MON-FRI' }),
+          start: new Cron({ minute: '0', hour: '8', day: '?', weekDay: 'MON-FRI' }),
+          stop: new Cron({ minute: '0', hour: '18', day: '?', weekDay: 'MON-FRI' }),
       timeZone: TimeZone.ASIA_TOKYO,
     },
   ],
@@ -53,7 +53,7 @@ new RdsScheduler(this, 'RdsInstanceScheduler', {
     // Put the instance into a dormant state.
     // As a measure for automatic start of Aurora, stop it every day.
     {
-      stop: new Cron({ minute: '0', hour: '0' }),
+      stop: new Cron({ minute: '0', hour: '0', day: '?', weekDay: '*' }),
       // timeZone is optional, default is UTC
     },
   ],
