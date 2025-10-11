@@ -12,7 +12,7 @@ It can be used to reduce billing outside of operational hours.
 [![Build Status](https://github.com/badmintoncryer/cdk-rds-scheduler/actions/workflows/build.yml/badge.svg)](https://github.com/badmintoncryer/cdk-rds-scheduler/actions/workflows/build.yml)
 [![Release Status](https://github.com/badmintoncryer/cdk-rds-scheduler/actions/workflows/release.yml/badge.svg)](https://github.com/badmintoncryer/cdk-rds-scheduler/actions/workflows/release.yml)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![npm downloads](https://img.shields.io/npm/dm/cdk-rds-scheduler.svg?style=flat)](https://www.npmjs.com/package/cdk-rds-scheduler)
+[![npm downloads](https://img.shields.io/npm/dt/cdk-rds-scheduler.svg?style=flat)](https://www.npmjs.com/package/cdk-rds-scheduler)
 
 
 ## Usage
