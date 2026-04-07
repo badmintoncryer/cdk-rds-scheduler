@@ -89,7 +89,7 @@ test('default for database cluster', () => {
     FlexibleTimeWindow: {
       Mode: 'OFF',
     },
-    ScheduleExpression: 'cron(0 8 * * MON-FRI *)',
+    ScheduleExpression: 'cron(0 8 ? * MON-FRI *)',
     ScheduleExpressionTimezone: 'Etc/UTC',
     Target: {
       Arn: {
@@ -128,7 +128,7 @@ test('default for database cluster', () => {
     FlexibleTimeWindow: {
       Mode: 'OFF',
     },
-    ScheduleExpression: 'cron(0 18 * * MON-FRI *)',
+    ScheduleExpression: 'cron(0 18 ? * MON-FRI *)',
     ScheduleExpressionTimezone: 'Etc/UTC',
     Target: {
       Arn: {
@@ -239,7 +239,7 @@ test('default for database instance', () => {
     FlexibleTimeWindow: {
       Mode: 'OFF',
     },
-    ScheduleExpression: 'cron(0 8 * * MON-FRI *)',
+    ScheduleExpression: 'cron(0 8 ? * MON-FRI *)',
     ScheduleExpressionTimezone: 'Etc/UTC',
     Target: {
       Arn: {
@@ -278,7 +278,7 @@ test('default for database instance', () => {
     FlexibleTimeWindow: {
       Mode: 'OFF',
     },
-    ScheduleExpression: 'cron(0 18 * * MON-FRI *)',
+    ScheduleExpression: 'cron(0 18 ? * MON-FRI *)',
     ScheduleExpressionTimezone: 'Etc/UTC',
     Target: {
       Arn: {
