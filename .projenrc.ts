@@ -35,7 +35,7 @@ project.projectBuild.testTask.exec('yarn tsc -p tsconfig.dev.json && yarn integ-
 // https://pypi.org/manage/project/rds-scheduler/settings/publishing/
 const releaseWorkflow = project.github?.tryFindWorkflow('release');
 releaseWorkflow?.file?.addOverride('jobs.release_pypi.permissions', {
-  contents: 'read',
+  'contents': 'read',
   'id-token': 'write',
 });
 // Replace the publib-pypi step (index 8) with pypa/gh-action-pypi-publish
@@ -44,7 +44,7 @@ releaseWorkflow?.file?.addDeletionOverride('jobs.release_pypi.steps.8.env');
 releaseWorkflow?.file?.addOverride('jobs.release_pypi.steps.8.uses', 'pypa/gh-action-pypi-publish@release/v1');
 releaseWorkflow?.file?.addOverride('jobs.release_pypi.steps.8.with', {
   'packages-dir': 'dist/python',
-  attestations: false,
+  'attestations': false,
 });
 
 project.synth();
