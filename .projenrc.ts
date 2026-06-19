@@ -7,7 +7,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   description: 'Automatic Start and Stop Scheduler for AWS RDS',
   defaultReleaseBranch: 'main',
   keywords: ['aws', 'cdk', 'RDS', 'aws-cdk', 'EventBridge'],
-  jsiiVersion: '~5.3.0',
+  jsiiVersion: '~5.9.0',
   name: 'cdk-rds-scheduler',
   projenrcTs: true,
   repositoryUrl: 'https://github.com/badmintoncryer/cdk-rds-scheduler.git',
