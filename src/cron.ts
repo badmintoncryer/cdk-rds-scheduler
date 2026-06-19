@@ -66,7 +66,9 @@ export class Cron {
 
     this.minute = options.minute ?? '*';
     this.hour = options.hour ?? '*';
-    this.day = options.day ?? '*';
+    // When weekDay is specified, day must be '?' to form a valid cron expression.
+    // AWS EventBridge Scheduler requires exactly one of day-of-month or day-of-week to be '?'.
+    this.day = options.day ?? (options.weekDay !== undefined ? '?' : '*');
     this.month = options.month ?? '*';
     this.year = options.year ?? '*';
     this.weekDay = options.weekDay ?? '?';
