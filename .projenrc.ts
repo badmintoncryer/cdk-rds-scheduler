@@ -28,6 +28,6 @@ const project = new awscdk.AwsCdkConstructLibrary({
   },
 });
 
-project.projectBuild.testTask.exec('yarn tsc -p tsconfig.dev.json && yarn integ-runner');
+project.projectBuild.testTask.exec('yarn tsc -p test/tsconfig.json --noEmit false --outDir . && yarn integ-runner');
 
 project.synth();
